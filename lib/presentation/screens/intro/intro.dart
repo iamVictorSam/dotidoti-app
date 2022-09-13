@@ -1,8 +1,10 @@
 import 'package:dotidoti_app/presentation/helper/constants.dart';
+import 'package:dotidoti_app/presentation/screens/signup/signup.dart';
 import 'package:dotidoti_app/presentation/widgets/border_btn.dart';
 import 'package:dotidoti_app/presentation/widgets/default_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({Key? key}) : super(key: key);
@@ -36,7 +38,7 @@ class IntroScreen extends StatelessWidget {
               Image.asset('assets/logo.png'),
               const Spacer(),
               DefaultBtn(
-                press: () {},
+                press: () => Get.to(const SignUpScreen()),
                 text: "Sign Up",
               ),
               SizedBox(
