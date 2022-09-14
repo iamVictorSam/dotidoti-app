@@ -7,14 +7,14 @@ import '../helper/constants.dart';
 class WalletCard extends StatelessWidget {
   const WalletCard({
     Key? key,
+    this.amount = "5,200",
   }) : super(key: key);
+
+  final String amount;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      // alignment: Alignment.topLeft,
-      // height: (24),
-      // width: (12),
       padding: EdgeInsets.all(20.h),
       width: double.infinity,
       decoration: BoxDecoration(
@@ -49,7 +49,7 @@ class WalletCard extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  '₦ 5,200.00',
+                  '₦ $amount',
                   style: TextStyle(
                     fontSize: 25.sp,
                     color: Colors.white,
