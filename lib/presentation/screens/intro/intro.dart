@@ -7,47 +7,55 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 class IntroScreen extends StatelessWidget {
-  const IntroScreen({Key? key}) : super(key: key);
+  const IntroScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 20.sp,
-            vertical: 30.sp,
-          ),
+    return Scaffold(
+      body: Container(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(
-                child: Text(
-                  'Welcome To Doti-Doti',
+              RichText(
+                text: const TextSpan(
+                  text: 'Welcome to \n',
                   style: TextStyle(
-                    fontWeight: FontWeight.w900,
-                    fontSize: 28.sp,
-                    color: kPrimary,
-                  ),
+                      fontWeight: FontWeight.w600,
+                      color: kPrimary,
+                      fontSize: (5)),
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: 'Doti-Doti',
+                      style: TextStyle(
+                        letterSpacing: 1.2,
+                        fontWeight: FontWeight.w900,
+                        color: Color(0xFFEB2326),
+                        fontSize: (5),
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              SizedBox(
-                height: 50.h,
+              const SizedBox(
+                height: (7),
               ),
-              Image.asset('assets/logo.png'),
-              const Spacer(),
               DefaultBtn(
-                press: () => Get.to(const SignUpScreen()),
-                text: "Sign Up",
+                press: () {
+                  // Get.to(LoginScreen());
+                },
+                text: 'Log in',
               ),
-              SizedBox(
-                height: 20.h,
+              const SizedBox(
+                height: (2),
               ),
               BorderBtn(
-                press: () {},
-                text: 'Login',
-              ),
+                  press: () => Get.to(
+                        () => const SignUpScreen(),
+                      ),
+                  text: 'Sign up')
             ],
           ),
         ),
