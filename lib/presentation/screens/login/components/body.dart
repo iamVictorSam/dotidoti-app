@@ -1,3 +1,4 @@
+import 'package:dotidoti_app/presentation/screens/home/home.dart';
 import 'package:dotidoti_app/presentation/screens/login/components/form.dart';
 import 'package:flutter/material.dart';
 
@@ -25,8 +26,8 @@ class LoginBody extends StatelessWidget {
               const LoginForm(),
               SizedBox(height: 30.h),
               DefaultBtn(
-                text: 'Sign up',
-                press: () async {},
+                text: 'Login',
+                press: () => Get.offAll(() => const HomeScreen()),
               ),
               SizedBox(height: 30.h),
               Padding(
