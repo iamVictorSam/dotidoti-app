@@ -73,29 +73,12 @@ InputDecorationTheme inputDecorationTheme() {
   return InputDecorationTheme(
     labelStyle:
         TextStyle(fontSize: 12.sp, color: kGrey, fontWeight: FontWeight.w600),
-    contentPadding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
+    contentPadding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 15.h),
     enabledBorder: outlineInputBorder,
     focusedBorder: enabledInputBorder(),
     border: outlineInputBorder,
   );
 }
-
-final textFieldDecoration = InputDecoration(
-  labelStyle: const TextStyle(
-    color: kGrey,
-  ),
-  hintStyle: const TextStyle(
-    color: kGrey,
-  ),
-  // floatingLabelBehavior: FloatingLabelAlignment.,
-  floatingLabelStyle: const TextStyle(
-    color: kGrey,
-  ),
-  contentPadding: EdgeInsets.symmetric(vertical: 40.h),
-  border: outlineInputBorder(),
-  focusedBorder: outlineInputBorder(),
-  enabledBorder: enabledInputBorder(),
-);
 
 OutlineInputBorder enabledInputBorder() {
   return OutlineInputBorder(

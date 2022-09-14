@@ -4,7 +4,6 @@ import 'package:dotidoti_app/presentation/widgets/default_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
 
 class SignUpBody extends StatelessWidget {
   @override
@@ -17,18 +16,6 @@ class SignUpBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                height: Get.height * 0.1,
-              ),
-              Text(
-                'Sign Up',
-                style: TextStyle(
-                  letterSpacing: 1.2,
-                  fontWeight: FontWeight.w900,
-                  color: Colors.black,
-                  fontSize: 30.sp,
-                ),
-              ),
               SizedBox(height: 20.h),
               const SignUpForm(),
               SizedBox(height: 30.h),
