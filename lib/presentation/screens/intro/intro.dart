@@ -1,4 +1,5 @@
 import 'package:dotidoti_app/presentation/helper/constants.dart';
+import 'package:dotidoti_app/presentation/screens/login/login.dart';
 import 'package:dotidoti_app/presentation/screens/signup/signup.dart';
 import 'package:dotidoti_app/presentation/widgets/border_btn.dart';
 import 'package:dotidoti_app/presentation/widgets/default_btn.dart';
@@ -44,7 +45,7 @@ class IntroScreen extends StatelessWidget {
               ),
               DefaultBtn(
                 press: () {
-                  // Get.to(LoginScreen());
+                  Get.to(const LoginScreen());
                 },
                 text: 'Log in',
               ),

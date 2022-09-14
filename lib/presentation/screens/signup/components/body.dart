@@ -1,11 +1,14 @@
 import 'package:dotidoti_app/presentation/helper/constants.dart';
 import 'package:dotidoti_app/presentation/screens/signup/components/form.dart';
 import 'package:dotidoti_app/presentation/widgets/default_btn.dart';
+import 'package:dotidoti_app/presentation/widgets/horizontal_line.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SignUpBody extends StatelessWidget {
+  const SignUpBody({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -109,26 +112,5 @@ class SignUpWith extends StatelessWidget {
               ),
               child: SvgPicture.asset('assets/icon/facebook.svg')),
         ]);
-  }
-}
-
-class HorizontalLine extends StatelessWidget {
-  const HorizontalLine({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        decoration: const BoxDecoration(
-            borderRadius: BorderRadius.all(
-              Radius.circular(10),
-            ),
-            color: kGrey),
-        height: (0.3),
-        // width: (10),
-      ),
-    );
   }
 }
