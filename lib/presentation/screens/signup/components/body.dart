@@ -1,7 +1,10 @@
 import 'package:dotidoti_app/presentation/helper/constants.dart';
+import 'package:dotidoti_app/presentation/screens/signup/components/form.dart';
 import 'package:dotidoti_app/presentation/widgets/default_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class SignUpBody extends StatelessWidget {
   @override
@@ -9,37 +12,31 @@ class SignUpBody extends StatelessWidget {
     return SafeArea(
       child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: (7.0)),
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(
-                height: (14.5),
+              SizedBox(
+                height: Get.height * 0.1,
               ),
-              const Text(
+              Text(
                 'Sign Up',
                 style: TextStyle(
                   letterSpacing: 1.2,
                   fontWeight: FontWeight.w900,
                   color: Colors.black,
-                  fontSize: (5.5),
+                  fontSize: 30.sp,
                 ),
               ),
-              const SizedBox(
-                height: (5.7),
-              ),
+              SizedBox(height: 20.h),
               const SignUpForm(),
-              const SizedBox(
-                height: (4),
-              ),
+              SizedBox(height: 30.h),
               DefaultBtn(
                 text: 'Sign up',
                 press: () async {},
               ),
-              const SizedBox(
-                height: (4),
-              ),
+              SizedBox(height: 30.h),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12.0),
                 child: Row(
@@ -54,18 +51,14 @@ class SignUpBody extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(
-                height: (4),
-              ),
+              SizedBox(height: 30.h),
               const SignUpWith(),
-              const SizedBox(
-                height: (4),
-              ),
+              SizedBox(height: 30.h),
               RichText(
-                text: const TextSpan(
+                text: TextSpan(
                   text: 'By clicking sign up I agree with ',
                   style: TextStyle(
-                    fontSize: (2),
+                    fontSize: 16.sp,
                     color: Colors.black,
                   ),
                   children: [
@@ -73,7 +66,7 @@ class SignUpBody extends StatelessWidget {
                         text: 'Terms of service and Privacy Policy',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: (2),
+                          fontSize: 16.sp,
                           decoration: TextDecoration.underline,
                           color: kPrimary,
                         ))
@@ -83,50 +76,6 @@ class SignUpBody extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class SignUpForm extends StatelessWidget {
-  const SignUpForm({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Form(
-      // key: _formKey,
-      child: Column(
-        children: [
-          TextFormField(
-            decoration: InputDecoration(
-              labelText: 'Name',
-              hintText: 'Jane Doe',
-              prefixIcon: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: SvgPicture.asset("assets/icon/flag.svg"),
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: (5),
-          ),
-          TextFormField(
-            keyboardType: TextInputType.emailAddress,
-            decoration: InputDecoration(
-              labelText: 'Email',
-              hintText: 'autupsyofjanedoe@gmail.com',
-              prefixIcon: Padding(
-                padding: const EdgeInsets.all(10.0),
-                child: SvgPicture.asset(
-                  "assets/icon/mail-line.svg",
-                ),
-              ),
-              // Icon(Icons.mail_outlined, color: Colors.black),
-            ),
-          ),
-        ],
       ),
     );
   }

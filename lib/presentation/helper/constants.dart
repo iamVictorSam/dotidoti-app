@@ -7,8 +7,6 @@ const kLight = Color(0xffA5C9CA);
 const kVeryLight = Color(0xffE7F6F2);
 const kWhite = Colors.white;
 
-
-
 const headStyle = TextStyle(
   color: kGrey,
   fontSize: 15,
@@ -23,8 +21,6 @@ const kPrimaryGradientColor = LinearGradient(
 );
 const kSecondaryColor = Color(0xFF979797);
 const kTextColor = Color(0xFF757575);
-
-
 
 final headingStyle = TextStyle(
   fontSize: 28.sp,
@@ -42,7 +38,7 @@ final kPadding = 20.w;
 
 // Form Error
 final RegExp emailValidatorRegExp =
-RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+    RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
 const String kEmailNullError = "Please Enter your email";
 const String kFnameNullError = "Please Enter your First name";
 const String kLnameNullError = "Please Enter your Last name";
@@ -55,6 +51,35 @@ const String kNamelNullError = "Please Enter your name";
 const String kPhoneNumberNullError = "Please Enter your phone number";
 const String kAddressNullError = "Please Enter your address";
 
+ThemeData theme() {
+  return ThemeData(
+    scaffoldBackgroundColor: Colors.white,
+    // fontFamily: 'Montserrat',
+    // appBarTheme: appBarTheme(),
+    // textTheme: textTheme(),
+    useMaterial3: true,
+
+    inputDecorationTheme: inputDecorationTheme(),
+    visualDensity: VisualDensity.adaptivePlatformDensity,
+  );
+}
+
+InputDecorationTheme inputDecorationTheme() {
+  OutlineInputBorder outlineInputBorder = OutlineInputBorder(
+    borderRadius: BorderRadius.circular(8),
+    borderSide: const BorderSide(color: kGrey),
+    gapPadding: 10,
+  );
+  return InputDecorationTheme(
+    labelStyle:
+        TextStyle(fontSize: 12.sp, color: kGrey, fontWeight: FontWeight.w600),
+    contentPadding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
+    enabledBorder: outlineInputBorder,
+    focusedBorder: enabledInputBorder(),
+    border: outlineInputBorder,
+  );
+}
+
 final textFieldDecoration = InputDecoration(
   labelStyle: const TextStyle(
     color: kGrey,
@@ -66,7 +91,7 @@ final textFieldDecoration = InputDecoration(
   floatingLabelStyle: const TextStyle(
     color: kGrey,
   ),
-  contentPadding: EdgeInsets.symmetric(vertical: 10.h),
+  contentPadding: EdgeInsets.symmetric(vertical: 40.h),
   border: outlineInputBorder(),
   focusedBorder: outlineInputBorder(),
   enabledBorder: enabledInputBorder(),

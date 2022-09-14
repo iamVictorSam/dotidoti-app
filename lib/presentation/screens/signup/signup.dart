@@ -1,3 +1,4 @@
+import 'package:dotidoti_app/presentation/screens/signup/components/body.dart';
 import 'package:flutter/material.dart';
 
 class SignUpScreen extends StatelessWidget {
@@ -9,6 +10,7 @@ class SignUpScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Sign Up"),
       ),
+      body: SignUpBody(),
     );
   }
 }
