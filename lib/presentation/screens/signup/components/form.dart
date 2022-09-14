@@ -17,18 +17,9 @@ class SignUpForm extends StatelessWidget {
             decoration: InputDecoration(
               labelText: 'Name',
               hintText: 'Jane Doe',
-              prefixIcon: Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: SvgPicture.asset("assets/icon/flag.svg"),
-                  ),
-                  Container(
-                    height: 20,
-                    decoration: const BoxDecoration(color: Colors.black),
-                  )
-                ],
+              prefixIcon: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: SvgPicture.asset("assets/icon/flag.svg"),
               ),
             ),
           ),
