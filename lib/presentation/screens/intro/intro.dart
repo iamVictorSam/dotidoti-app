@@ -20,27 +20,27 @@ class IntroScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               RichText(
-                text: const TextSpan(
+                text: TextSpan(
                   text: 'Welcome to \n',
                   style: TextStyle(
                       fontWeight: FontWeight.w600,
                       color: kPrimary,
-                      fontSize: (5)),
+                      fontSize: 25.sp),
                   children: <TextSpan>[
                     TextSpan(
                       text: 'Doti-Doti',
                       style: TextStyle(
                         letterSpacing: 1.2,
                         fontWeight: FontWeight.w900,
-                        color: Color(0xFFEB2326),
-                        fontSize: (5),
+                        color: const Color(0xFFEB2326),
+                        fontSize: 35.sp,
                       ),
                     ),
                   ],
                 ),
               ),
-              const SizedBox(
-                height: (7),
+              SizedBox(
+                height: 60.sp,
               ),
               DefaultBtn(
                 press: () {
@@ -48,8 +48,8 @@ class IntroScreen extends StatelessWidget {
                 },
                 text: 'Log in',
               ),
-              const SizedBox(
-                height: (2),
+              SizedBox(
+                height: 15.h,
               ),
               BorderBtn(
                   press: () => Get.to(

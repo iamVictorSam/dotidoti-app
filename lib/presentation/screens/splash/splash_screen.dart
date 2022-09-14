@@ -31,7 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 Container(
                   alignment: Alignment.centerRight,
                   child: TextButton(
-                    onPressed: () => Get.off(const IntroScreen()),
+                    onPressed: () => Get.off(() => const IntroScreen()),
                     child: const Text(
                       'Skip',
                       style: TextStyle(
@@ -96,7 +96,7 @@ class _SplashScreenState extends State<SplashScreen> {
                             ),
                             child: DefaultBtn(
                                 press: () {
-                                  Get.offAll(const IntroScreen());
+                                  Get.offAll(() => const IntroScreen());
                                 },
                                 text: 'Get Started'),
                           )
