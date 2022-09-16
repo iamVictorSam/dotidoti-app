@@ -1,6 +1,8 @@
 import 'package:dotidoti_app/presentation/screens/profile/components/profile_menu.dart';
+import 'package:dotidoti_app/presentation/screens/subscription/subscription.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -30,8 +32,9 @@ class ProfileScreen extends StatelessWidget {
                 const ProfileMenu(
                     text: "Payment History",
                     icon: Icons.call_to_action_rounded),
-                const ProfileMenu(
+                ProfileMenu(
                     text: "Active Subscription",
+                    press: () => Get.to(() => const SubscriptionScreen()),
                     icon: Icons.rate_review_rounded),
                 const ProfileMenu(
                     text: "Notification", icon: Icons.notification_important),

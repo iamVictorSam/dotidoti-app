@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 
+import 'components/body.dart';
 
-class Subscription extends StatelessWidget {
-const Subscription({ Key? key }) : super(key: key);
+class SubscriptionScreen extends StatelessWidget {
+  const SubscriptionScreen({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context){
-    return Container();
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Subscription'),
+      ),
+      body: const SubBody(),
+    );
   }
 }
