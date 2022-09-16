@@ -1,6 +1,7 @@
 import 'package:dotidoti_app/presentation/screens/about/about.dart';
 import 'package:dotidoti_app/presentation/screens/intro/intro.dart';
 import 'package:dotidoti_app/presentation/screens/notifications/notifications.dart';
+import 'package:dotidoti_app/presentation/screens/pickup_history/pickup_history.dart';
 import 'package:dotidoti_app/presentation/screens/profile/components/profile_menu.dart';
 import 'package:dotidoti_app/presentation/screens/settings/settings.dart';
 import 'package:dotidoti_app/presentation/screens/subscription/subscription.dart';
@@ -30,14 +31,16 @@ class ProfileScreen extends StatelessWidget {
                       style: TextStyle(fontSize: 30.sp),
                     )),
                 SizedBox(height: 20.h),
-                const ProfileMenu(
-                    text: "Pickup History",
-                    icon: Icons.rotate_90_degrees_ccw_outlined),
+                ProfileMenu(
+                  text: "Pickup History",
+                  icon: Icons.rotate_90_degrees_ccw_outlined,
+                  press: () => Get.to(() => const PickupHistory()),
+                ),
                 const ProfileMenu(
                     text: "Payment History",
                     icon: Icons.call_to_action_rounded),
                 ProfileMenu(
-                    text: "Active Subscription",
+                    text: "Subscriptions",
                     press: () => Get.to(() => const SubscriptionScreen()),
                     icon: Icons.rate_review_rounded),
                 ProfileMenu(
