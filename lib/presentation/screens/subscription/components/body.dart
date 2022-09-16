@@ -1,3 +1,4 @@
+import 'package:dotidoti_app/presentation/screens/select_payment/select_payment.dart';
 import 'package:dotidoti_app/presentation/widgets/subscription_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -75,7 +76,7 @@ class _SubBodyState extends State<SubBody> {
                 children: [
                   SubscriptionCard(
                     amount: "5,000",
-                    press: () {},
+                    press: () => Get.to(() => const SelectPaymentScreen()),
                   ),
                   SubscriptionCard(
                     plan: "Monthly",
