@@ -1,3 +1,4 @@
+import 'package:dotidoti_app/presentation/screens/notifications/notifications.dart';
 import 'package:dotidoti_app/presentation/screens/profile/components/profile_menu.dart';
 import 'package:dotidoti_app/presentation/screens/subscription/subscription.dart';
 import 'package:flutter/material.dart';
@@ -36,8 +37,11 @@ class ProfileScreen extends StatelessWidget {
                     text: "Active Subscription",
                     press: () => Get.to(() => const SubscriptionScreen()),
                     icon: Icons.rate_review_rounded),
-                const ProfileMenu(
-                    text: "Notification", icon: Icons.notification_important),
+                ProfileMenu(
+                  text: "Notification",
+                  icon: Icons.notification_important,
+                  press: () => Get.to(() => const NotificationScreen()),
+                ),
                 const ProfileMenu(text: "Settings", icon: Icons.settings),
                 const ProfileMenu(text: "About", icon: Icons.info),
                 const ProfileMenu(text: "Logout", icon: Icons.logout),

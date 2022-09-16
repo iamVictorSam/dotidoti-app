@@ -6,6 +6,7 @@ const kPrimary = Color(0xff395B64);
 const kLight = Color(0xffA5C9CA);
 const kVeryLight = Color(0xffE7F6F2);
 const kWhite = Colors.white;
+const msgGrey = Color(0xffF5F4F4);
 
 const headStyle = TextStyle(
   color: kGrey,
