@@ -2,6 +2,7 @@ import 'package:dotidoti_app/presentation/screens/about/about.dart';
 import 'package:dotidoti_app/presentation/screens/intro/intro.dart';
 import 'package:dotidoti_app/presentation/screens/notifications/notifications.dart';
 import 'package:dotidoti_app/presentation/screens/profile/components/profile_menu.dart';
+import 'package:dotidoti_app/presentation/screens/settings/settings.dart';
 import 'package:dotidoti_app/presentation/screens/subscription/subscription.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -44,7 +45,11 @@ class ProfileScreen extends StatelessWidget {
                   icon: Icons.notification_important,
                   press: () => Get.to(() => const NotificationScreen()),
                 ),
-                const ProfileMenu(text: "Settings", icon: Icons.settings),
+                ProfileMenu(
+                  text: "Settings",
+                  icon: Icons.settings,
+                  press: () => Get.to(() => const Settings()),
+                ),
                 ProfileMenu(
                   text: "About",
                   icon: Icons.info,
