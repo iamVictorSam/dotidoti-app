@@ -1,5 +1,5 @@
 import 'package:dotidoti_app/presentation/helper/constants.dart';
-import 'package:dotidoti_app/presentation/screens/signup/signup.dart';
+import 'package:dotidoti_app/presentation/screens/payment/payment.dart';
 import 'package:dotidoti_app/presentation/widgets/border_btn.dart';
 import 'package:dotidoti_app/presentation/widgets/default_btn.dart';
 import 'package:flutter/material.dart';
@@ -52,7 +52,7 @@ class SelectPaymentScreen extends StatelessWidget {
             ),
             BorderBtn(
                 press: () => Get.to(
-                      () => const SignUpScreen(),
+                      () => const PaymentScreen(),
                     ),
                 text: 'Pay with Card')
           ],
