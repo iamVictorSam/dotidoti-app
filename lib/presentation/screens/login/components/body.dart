@@ -1,4 +1,4 @@
-import 'package:dotidoti_app/presentation/screens/home/home.dart';
+import 'package:dotidoti_app/presentation/screens/instant_pickup/instant_pickup.dart';
 import 'package:dotidoti_app/presentation/screens/login/components/form.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +27,7 @@ class LoginBody extends StatelessWidget {
               SizedBox(height: 30.h),
               DefaultBtn(
                 text: 'Login',
-                press: () => Get.offAll(() => const HomeScreen()),
+                press: () => Get.offAll(() => InstantPickup()),
               ),
               SizedBox(height: 30.h),
               Padding(

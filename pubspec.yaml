@@ -41,7 +41,10 @@ dependencies:
   flutter_glow: ^0.2.0
   flutter_screenutil: ^5.5.4
   flutter_svg: ^1.1.5
+  geolocator: ^9.0.2
   get: ^4.6.5
+  google_maps_flutter: ^2.2.0
+  location: ^4.4.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0

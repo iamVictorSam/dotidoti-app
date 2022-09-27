@@ -8,9 +8,11 @@ class WalletCard extends StatelessWidget {
   const WalletCard({
     Key? key,
     this.amount = "5,200",
+    required this.fund,
   }) : super(key: key);
 
   final String amount;
+  final Function() fund;
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +74,7 @@ class WalletCard extends StatelessWidget {
                 width: 150.w,
                 child: BorderBtn(
                   text: 'Fund wallet',
-                  press: () {},
+                  press: fund,
                   color: kWhite,
                   textColor: kWhite,
                 ),

@@ -1,4 +1,5 @@
 import 'package:dotidoti_app/presentation/helper/constants.dart';
+import 'package:dotidoti_app/presentation/screens/payment/payment.dart';
 import 'package:dotidoti_app/presentation/widgets/wallet_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -24,7 +25,9 @@ class _HomeBodyState extends State<HomeBody> {
           SizedBox(
             height: 20.h,
           ),
-          const WalletCard(),
+          WalletCard(
+            fund: () => Get.to(() => const PaymentScreen()),
+          ),
           SizedBox(
             height: Get.height * 0.15,
           ),
