@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["dotidoti", "onchanged", "signup"]
+  "cSpell.words": ["dotidoti", "onchanged", "signup"],
+  "editor.acceptSuggestionOnEnter": "on"
 }

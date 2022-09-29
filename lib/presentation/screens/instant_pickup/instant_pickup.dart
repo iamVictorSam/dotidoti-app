@@ -82,16 +82,24 @@ class InstantPickupState extends State<InstantPickup> {
                   ),
                   const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                    child: TextField(),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          hintText: 'Pick a Location or closest Landmark'),
+                    ),
                   ),
                   Positioned(
                     bottom: 20,
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 20, vertical: 20),
-                      child: DefaultBtn(
-                        press: () => Get.to(
-                          const WasteCapture(),
+                    left: 0,
+                    right: 0,
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      child: SizedBox(
+                        width: Get.width * 0.8,
+                        child: DefaultBtn(
+                          text: 'Select Location',
+                          press: () => Get.to(
+                            const WasteCapture(),
+                          ),
                         ),
                       ),
                     ),
