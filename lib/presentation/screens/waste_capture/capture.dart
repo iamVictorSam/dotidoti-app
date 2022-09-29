@@ -113,7 +113,7 @@ class _CamCaptureState extends State<CamCapture> {
                           child: const CircleAvatar(
                             radius: 30,
                             backgroundColor: Colors.green,
-                            child: Icon(Icons.check, size: 25, color: kWhite),
+                            child: Icon(Icons.camera, size: 25, color: kWhite),
                           )),
                     ],
                   ),
