@@ -18,11 +18,6 @@ class _WasteCaptureState extends State<WasteCapture> {
   @override
   void initState() {
     super.initState();
-    startCam();
-  }
-
-  void startCam() async {
-    _cameras = await availableCameras();
   }
 
   @override
