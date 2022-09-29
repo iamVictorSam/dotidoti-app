@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:dotidoti_app/presentation/helper/constants.dart';
+import 'package:dotidoti_app/presentation/screens/profile/profile.dart';
 import 'package:dotidoti_app/presentation/screens/waste_capture/waste_capture.dart';
 import 'package:dotidoti_app/presentation/widgets/default_btn.dart';
 import 'package:flutter/material.dart';
@@ -82,11 +84,33 @@ class InstantPickupState extends State<InstantPickup> {
                       ),
                     },
                   ),
-                  const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-                    child: TextField(
-                      decoration: InputDecoration(
-                          hintText: 'Pick a Location or closest Landmark'),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 20, vertical: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Expanded(
+                          child: TextField(
+                            decoration: InputDecoration(
+                                hintText:
+                                    'Pick a Location or closest Landmark'),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 20.w,
+                        ),
+                        GestureDetector(
+                            onTap: () => Get.to(() => const ProfileScreen()),
+                            child: const CircleAvatar(
+                              backgroundColor: kPrimary,
+                              child: Icon(
+                                Icons.person,
+                                color: kWhite,
+                              ),
+                            ))
+                      ],
                     ),
                   ),
                   Positioned(
@@ -96,7 +120,7 @@ class InstantPickupState extends State<InstantPickup> {
                     child: Align(
                       alignment: Alignment.bottomCenter,
                       child: Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20.w),
+                        padding: EdgeInsets.only(left: 20.w),
                         // width: Get.width * 0.8,
                         child: DefaultBtn(
                           text: 'Select Location',

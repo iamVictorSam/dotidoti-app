@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Home'),
+          title: const Text('Dashboard'),
           actions: [
             GestureDetector(
               onTap: (() => Get.to(const ProfileScreen())),
