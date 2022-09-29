@@ -58,7 +58,7 @@ class _WastePreviewState extends State<WastePreview> {
               DefaultBtn(
                 // press: () => Get.to(() => CamCapture(cameras: _cameras)),
                 press: () {},
-                text: 'Proceed to Waste Capture',
+                text: 'Submit',
               ),
             ],
           )),
