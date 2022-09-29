@@ -15,7 +15,7 @@ class SuccessScreen extends StatefulWidget {
 class _SuccessScreenState extends State<SuccessScreen> {
   @override
   void initState() {
-    Future.delayed(3.seconds, () => Get.to(() => InstantPickup()));
+    Future.delayed(5.seconds, () => Get.to(() => InstantPickup()));
 
     super.initState();
   }
@@ -30,11 +30,12 @@ class _SuccessScreenState extends State<SuccessScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const CircleAvatar(
-              radius: 100,
+              radius: 60,
               backgroundColor: Colors.green,
               child: Icon(
                 Icons.check,
                 color: kWhite,
+                size: 50,
               ),
             ),
             SizedBox(
@@ -49,10 +50,11 @@ class _SuccessScreenState extends State<SuccessScreen> {
                   color: Colors.green),
             ),
             SizedBox(
-              height: 10.h,
+              height: 30.h,
             ),
             Text(
               'You have successfully uploaded your Waste',
+              textAlign: TextAlign.center,
               style: TextStyle(
                   fontSize: 18.sp, letterSpacing: 1, color: Colors.grey),
             ),

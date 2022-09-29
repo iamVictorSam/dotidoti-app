@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:dotidoti_app/presentation/screens/waste_capture/waste_capture.dart';
 import 'package:dotidoti_app/presentation/widgets/default_btn.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:location/location.dart';
@@ -62,6 +63,7 @@ class InstantPickupState extends State<InstantPickup> {
               child: Stack(
                 children: [
                   GoogleMap(
+                    zoomControlsEnabled: false,
                     mapType: MapType.normal,
                     initialCameraPosition: CameraPosition(
                       // bearing: 192.8334901395799,
@@ -93,8 +95,9 @@ class InstantPickupState extends State<InstantPickup> {
                     right: 0,
                     child: Align(
                       alignment: Alignment.bottomCenter,
-                      child: SizedBox(
-                        width: Get.width * 0.8,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 20.w),
+                        // width: Get.width * 0.8,
                         child: DefaultBtn(
                           text: 'Select Location',
                           press: () => Get.to(
