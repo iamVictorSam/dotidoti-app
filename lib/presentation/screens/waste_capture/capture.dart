@@ -14,13 +14,16 @@ class CamCapture extends StatefulWidget {
 }
 
 class _CamCaptureState extends State<CamCapture> {
-  // late CameraController _cameraController;
   late CameraController controller;
   XFile? picture;
 
   @override
   void initState() {
+    startCamera();
     super.initState();
+  }
+
+  void startCamera() {
     controller = CameraController(widget.cameras![0], ResolutionPreset.max);
     controller.initialize().then((_) {
       if (!mounted) {
@@ -46,32 +49,6 @@ class _CamCaptureState extends State<CamCapture> {
     controller.dispose();
     super.dispose();
   }
-
-  // @override
-  // void initState() {
-  //   startCamera();
-  //   super.initState();
-  // }
-
-  // void startCamera() async {
-  //   cameras = await availableCameras();
-
-  //   _cameraController =
-  //       CameraController(cameras[0], ResolutionPreset.high, enableAudio: false);
-
-  //   await _cameraController.initialize().then((value) {
-  //     if (!mounted) {
-  //       return;
-  //     }
-  //     setState(() {});
-  //   }).catchError((e) => print(e));
-  // }
-
-  // @override
-  // void dispose() {
-  //   _cameraController.dispose();
-  //   super.dispose();
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -124,7 +101,9 @@ class _CamCaptureState extends State<CamCapture> {
         ),
       );
     } else {
-      return const SizedBox();
+      return const Center(
+        child: CircularProgressIndicator(),
+      );
     }
   }
 }
