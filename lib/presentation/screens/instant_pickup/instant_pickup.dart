@@ -120,7 +120,7 @@ class InstantPickupState extends State<InstantPickup> {
                     child: Align(
                       alignment: Alignment.bottomCenter,
                       child: Padding(
-                        padding: EdgeInsets.only(left: 20.w),
+                        padding: EdgeInsets.symmetric(horizontal: 20.w),
                         // width: Get.width * 0.8,
                         child: DefaultBtn(
                           text: 'Select Location',
